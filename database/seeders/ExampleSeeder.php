@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Example;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -15,8 +16,9 @@ class ExampleSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('examples')->insert([
-            'id' => 10
-        ]);
+        // DB::table('examples')->insert([
+        //     'id' => 10
+        // ]);
+        Example::factory()->count(3)->create();
     }
 }
